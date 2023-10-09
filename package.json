@@ -1,7 +1,7 @@
 {
   "name": "nodejs-news",
   "version": "1.0.0",
-  "description": "",
+  "description": "First individual project\r # Description\r This is the tech news website where you can search about different sort of technologies,how to implement them.The user just need to signup through the website ,and can read various tech news,blogs,listen audio,read ebooks on tech.We are getting various apps or websites but with tech news the scenario is quite different,to grasp different emerging technlogies,this will work the hard core way.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -18,5 +18,14 @@
     "mongoose": "^6.1.4",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhvendraprasad/Tech-Mirror.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Madhvendraprasad/Tech-Mirror/issues"
+  },
+  "homepage": "https://github.com/Madhvendraprasad/Tech-Mirror#readme"
 }

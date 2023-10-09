@@ -32,6 +32,7 @@ app.get('/ebook',(req,res)=>{
 app.get('/signup',(req,res)=>{
     res.render('signup');
 })
+
 let db=mongoose.connection;
 db.once('open',()=>{console.log("successfully connected")});
 db.on('err',()=>{console.log("error in connecting to database")});
@@ -41,9 +42,15 @@ app.get('/signup_success',(req,res)=>{
 app.post('/signup',(req,res)=>{
     var name=req.body.name;
 var email=req.body.email;
+var tech_stack=req.body.tech_stack;
+var purpose=req.body.purpose;
+console.log(purpose);
+console.log(tech_stack);
 var data={
     "name":name,
-    "email":email
+    "email":email,
+    "tech_stack":tech_stack,
+    "purpose":purpose
 }
 console.log("database");
 db.collection('users').insertOne(data,(err,collection)=>{

@@ -5,9 +5,12 @@ homeRouter.get("/", async (req, res) => {
   //res.render('news');
   try {
     const newsAPI = await axios.get(`https://raddy.co.uk/wp-json/wp/v2/posts/`);
+ 
     res.render("news", { articles: newsAPI.data });
   } catch (err) {
+    
     if (err.response) {
+      console.log("yes2")
       res.render("news", { articles: null });
       console.log(err.response.data);
       console.log(err.response.status);
