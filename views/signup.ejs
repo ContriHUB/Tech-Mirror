@@ -13,8 +13,43 @@
    <form action="/signup" method="POST">
      <input type="firstname" class="input-box" name="name" placeholder=" Name" required>
      <input type="email" class="input-box" name="email" placeholder="Email" required>
+
+     <select id="techStack" name="tech_stack" class="input-select" required>
+      <option value="">Select Tech Stack</option>
+      <option value="Java">Java</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="C++">C++</option>
+      <option value="python">python</option>
+      <option value="Golang">Golang</option>
+      <!-- Add more tech stack options as needed -->
+  </select>
+
+  <!-- <br> -->
+
+  <!-- <label for="purpose">Select Purpose:</label> -->
+  <select id="purpose" name="purpose" class="input-select" required>
+      <option value="">Select Purpose</option>
+      <option value="Student">Student</option>
+      <option value="Professional">Professional</option>
+      <option value="Amateur">Amateur</option>
+      <!-- Add more purpose options as needed -->
+  </select>
      <button type="submit" class="signup-btn">SignUp</button>
    </form>
  </div>
+
+ <script>
+  // This is for making sure that techstach and purpose both are filled
+
+document.getElementById("techPurposeForm").addEventListener("submit", function(event) {
+    const techStack = document.getElementById("techStack").value;
+    const purpose = document.getElementById("purpose").value;
+
+    if (!techStack || !purpose) {
+        alert("Please select both a tech stack and a purpose.");
+        event.preventDefault(); // Prevent form submission if fields are not filled.
+    }
+});
+</script>
 </body>
 </html>
